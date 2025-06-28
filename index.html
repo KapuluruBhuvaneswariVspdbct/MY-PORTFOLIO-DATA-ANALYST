@@ -828,6 +828,19 @@ body {
   flex-wrap: wrap;
 
 }
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #333;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.close-modal:hover {
+  color: #ff4e4e;
+}
 
 .certificate-card {
   background-color: #fff;
@@ -1499,7 +1512,8 @@ body {
 <div id="modal1" class="modal">
   <div class="modal-content">
     
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
+   <span class="close-modal" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
+
     <div class="modal-grid">
     
         <h2>Consumer Goods Insights using SQL & Tableau</h2>
@@ -1513,7 +1527,7 @@ body {
       <!-- Row 1 – Intro & Carousel -->
       <div class="grid-row row-1">
         <div class="info">
-            <p><strong>Domain/Function:</strong> Consumer Goods / Business Intelligence</p>
+            <p><strong>Domain/Function:</strong> Consumer Goods </p>
           <p>
             This project delivers actionable business insights for <strong>Atliq Hardware</strong>, a global consumer electronics brand, by solving 10 real-world business questions using <strong>MySQL</strong> and visualizing the results in <strong>Tableau</strong>. The goal was to assist business stakeholders in making faster decisions across sales, product, and market strategy using a clean, analysis-ready relational dataset.
           </p>
