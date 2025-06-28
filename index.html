@@ -524,12 +524,12 @@ body {
 /* Modal base */
 .modal {
   display: none;
-  position:absolute;
+  position: fixed;
   z-index: 999;
   left: 0;
   top: 0;
   width: 100%;
-  max-width:100%;
+  max-width:95%;
   height: 100%;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.6);
@@ -585,6 +585,18 @@ body {
   margin: 6px 0;
   font-size: 16px;
   color: #467df3;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 15px;
+  margin: 4% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px; /* reduce from 1000px */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Boxed info section */
@@ -1300,17 +1312,6 @@ body {
     padding: 60px;
     background: white;
   }
-.modal-content {
-  background: #fff;
-  border-radius: 15px;
-  margin: 4% auto;
-  width: 100%;
-  max-width: 800px; /* reduce from 1000px */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  animation: fadeIn 0.3s ease-in-out;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
 
   .modal-grid {
     display: grid;
