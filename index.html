@@ -528,12 +528,12 @@ body {
   z-index: 999;
   left: 0;
   top: 0;
-  width: 90%;
+  width: 80%;
   max-width:80%;
   height: 100%;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px; /* optional: gives breathing space inside */
+  padding: 70px; /* optional: gives breathing space inside */
 }
 
 
@@ -610,6 +610,34 @@ body {
 .project-points ul {
   list-style: none;
   padding-left: 0;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px; /* breathing space for mobile too */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 700px; /* reduced from 800px */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 30px;
 }
 
 .project-points li {
@@ -1304,7 +1332,7 @@ body {
   background: #fff;
   border-radius: 15px;
   margin: 4% auto;
-  width: 80%;
+  width: 100%;
   max-width: 800px; /* reduce from 1000px */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   animation: fadeIn 0.3s ease-in-out;
