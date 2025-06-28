@@ -517,6 +517,8 @@ body {
 }
 .project-card button:hover {
   background-color: #3e5ddb;
+}body.modal-open {
+  overflow: hidden;
 }
 
 /* Modal base */
@@ -527,6 +529,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
+  max-width:95%;
   height: 100%;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.6);
@@ -542,7 +545,7 @@ body {
   margin: 4% auto;
   padding: 30px;
   width: 90%;
-  max-width: 1000px;
+  max-width: 100%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -1422,15 +1425,11 @@ body {
     
   <h2><strong>Key</strong> <span>Skills</span></h2>
   <div class="skills-buttons">
-    <button onclick="addSkill('Excel')">Excel</button>
-    <button onclick="addSkill('SQL')">SQL</button>
-    <button onclick="addSkill('Tableau')">Tableau</button>
     <button onclick="addSkill('Python')">Python</button>
     <button onclick="addSkill('Pandas')">Pandas</button>
     <button onclick="addSkill('NumPy')">NumPy</button>
     <button onclick="addSkill('Matplotlib')">Matplotlib</button>
     <button onclick="addSkill('EDA')">EDA</button>
-    
   </div>
   <div id="selected-skills" class="skills-display"></div>
 </section>
