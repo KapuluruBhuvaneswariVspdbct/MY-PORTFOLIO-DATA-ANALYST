@@ -647,7 +647,6 @@ body {
 .project-links {
   margin-top: 20px;
   text-align: center;
-  padding-bottom :30px;
 }
 
 .project-links a {
@@ -670,7 +669,7 @@ body {
 }
 
 .carousel img {
-  max-width: 700px;
+  max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
@@ -684,7 +683,7 @@ body {
   }
 
   .project-links {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 
   .project-links a {
@@ -827,19 +826,6 @@ body {
   gap: 20px;
   flex-wrap: wrap;
 
-}
-.close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: #333;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.close-modal:hover {
-  color: #ff4e4e;
 }
 
 .certificate-card {
@@ -1214,7 +1200,7 @@ body {
   top: 20px;
   right: 30px;
   font-size: 40px;
-  color: red;
+  color: white;
   cursor: pointer;
 }
 .footer {
@@ -1358,7 +1344,7 @@ body {
   }
 
   .carousel img {
-    width: 600px;
+    width: 500px;
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 8px;
@@ -1366,7 +1352,7 @@ body {
   }
 
   .youtube-thumb iframe {
-    width: 600px;
+    width: 500px;
     aspect-ratio: 16/9;
     border: none;
     border-radius: 8px;
@@ -1511,28 +1497,20 @@ body {
   </div>
 <div id="modal1" class="modal">
   <div class="modal-content">
-    
-   <span class="close-modal" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
-
     <div class="modal-grid">
-    
-        <h2>Consumer Goods Insights using SQL & Tableau</h2>
-         <p><strong>Skills Used:</strong> MySQL, Tableau, Joins, CTEs, Window Functions, Aggregations, Grouping, and Data Storytelling.</p>
-    
-           <div class="project-links">
-            <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_dataanalytics-sql-tableau-activity-..." target="_blank" class="linkedin-btn">LinkedIn</a>
-            <a href="https://github.com/KapuluruBhuvaneswariVspdbct" target="_blank" class="github-btn">GitHub</a>
-          </div>
-      
+
       <!-- Row 1 – Intro & Carousel -->
       <div class="grid-row row-1">
         <div class="info">
-            <h4>PROJECT INTRODUCTION</h4> 
-            <p><strong>Domain/Function:</strong> Consumer Goods </p>
+          <h2>Consumer Goods Insights using SQL & Tableau</h2>
+          <p><strong>Domain/Function:</strong> Consumer Goods / Business Intelligence</p>
           <p>
             This project delivers actionable business insights for <strong>Atliq Hardware</strong>, a global consumer electronics brand, by solving 10 real-world business questions using <strong>MySQL</strong> and visualizing the results in <strong>Tableau</strong>. The goal was to assist business stakeholders in making faster decisions across sales, product, and market strategy using a clean, analysis-ready relational dataset.
           </p>
-       
+          <div class="project-links">
+            <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_dataanalytics-sql-tableau-activity-..." target="_blank" class="linkedin-btn">LinkedIn</a>
+            <a href="https://github.com/KapuluruBhuvaneswariVspdbct" target="_blank" class="github-btn">GitHub</a>
+          </div>
         </div>
         <div class="carousel">
           <img src="e6b30287-99c6-4842-889b-d615372ef1e4-5 - Copy.jpg" alt="Retail Dashboard 1" height="330px" width="200px">
@@ -1556,8 +1534,11 @@ body {
             <li>Top 5 Indian customers by average discount percentage</li>
             <li>Monthly gross sales trend analysis</li>
             <li>Quarter-wise volume analysis (2020)</li>
+            <li>Channel performance & contribution in 2021</li>
+            <li>Top 3 high-performing products in each division</li>
           </ul>
-           </div>
+          <p><strong>Skills Used:</strong> MySQL, Tableau, Joins, CTEs, Window Functions, Aggregations, Grouping, and Data Storytelling.</p>
+        </div>
         <div class="youtube-thumb">
           <iframe 
             width="100%" 
@@ -1572,45 +1553,8 @@ body {
       </div>
 
       <!-- Row 3 – Tableau Dashboard Embed -->
-      <h3>LIVE DASHBOARD</h3>
       <div class="grid-row row-3">
-        <div class='tableauPlaceholder' id='viz1751131283986' style='position: relative'>
-          <noscript>
-            <a href='https://public.tableau.com/views/SALES-INSIGHTS-TABLEAU/Dashboard1'>
-              <img alt='Dashboard 1' src='https://public.tableau.com/static/images/SA/SALES-INSIGHTS-TABLEAU/Dashboard1/1_rss.png' style='border: none' />
-            </a>
-          </noscript>
-          <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='SALES-INSIGHTS-TABLEAU/Dashboard1' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/SA/SALES-INSIGHTS-TABLEAU/Dashboard1/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-          </object>
-        </div>
-        <script type='text/javascript'>
-          var divElement = document.getElementById('viz1751131283986');
-          var vizElement = divElement.getElementsByTagName('object')[0];
-          if (divElement.offsetWidth > 800) {
-            vizElement.style.width = '1000px';
-            vizElement.style.height = '727px';
-          } else {
-            vizElement.style.width = '100%';
-            vizElement.style.height = '727px';
-          }
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-      </div>
+<div class='tableauPlaceholder' id='viz1751143335926' style='position: relative'><noscript><a href='#'><img alt='Dashboard 5 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;consumer-goods2&#47;Dashboard5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='consumer-goods2&#47;Dashboard5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;consumer-goods2&#47;Dashboard5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1751143335926');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
 
     </div>
   </div>
