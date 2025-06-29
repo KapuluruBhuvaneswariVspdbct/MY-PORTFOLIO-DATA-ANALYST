@@ -1344,7 +1344,7 @@ body {
   }
 
   .carousel img {
-    width: 500px;
+    width: 600px;
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 8px;
@@ -1352,7 +1352,7 @@ body {
   }
 
   .youtube-thumb iframe {
-    width: 500px;
+    width: 600px;
     aspect-ratio: 16/9;
     border: none;
     border-radius: 8px;
@@ -1373,9 +1373,22 @@ body {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 5px;
-    color: white;
+    color: blue;
     font-weight: bold;
   }
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #333;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.close-modal:hover {
+  color: #ff4e4e;
+}
 
 
 
@@ -1497,9 +1510,11 @@ body {
   </div>
 <div id="modal1" class="modal">
   <div class="modal-content">
+    <span class="close-modal" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
+
     <div class="modal-grid">
     
-        <h2>Consumer Goods Insights using SQL & Tableau</h2>
+        <h2> Goods Insights using SQL & Tableau</h2>
          <p><strong>Skills Used:</strong> MySQL, Tableau, Joins, CTEs, Window Functions, Aggregations, Grouping, and Data Storytelling.</p>
     
            <div class="project-links">
