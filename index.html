@@ -1344,7 +1344,7 @@ body {
   }
 
   .carousel img {
-    width: 600px;
+    width: 500px;
     aspect-ratio: 16/9;
     object-fit: cover;
     border-radius: 8px;
@@ -1352,7 +1352,7 @@ body {
   }
 
   .youtube-thumb iframe {
-    width: 600px;
+    width: 500px;
     aspect-ratio: 16/9;
     border: none;
     border-radius: 8px;
@@ -1376,19 +1376,6 @@ body {
     color: white;
     font-weight: bold;
   }
-.close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: blue;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.close-modal:hover {
-  color: #ff4e4e;
-}
 
 
 
@@ -1510,26 +1497,20 @@ body {
   </div>
 <div id="modal1" class="modal">
   <div class="modal-content">
-    <span class="close-modal" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
-
     <div class="modal-grid">
-    
-        <h2> Goods Insights using SQL & Tableau</h2>
-         <p><strong>Skills Used:</strong> MySQL, Tableau, Joins, CTEs, Window Functions, Aggregations, Grouping, and Data Storytelling.</p>
-    
-           <div class="project-links">
-            <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_dataanalytics-sql-tableau-activity-..." target="_blank" class="linkedin-btn">LinkedIn</a>
-            <a href="https://github.com/KapuluruBhuvaneswariVspdbct" target="_blank" class="github-btn">GitHub</a>
-          </div>
-      
+
       <!-- Row 1 – Intro & Carousel -->
       <div class="grid-row row-1">
         <div class="info">
-            <p><strong>Domain/Function:</strong> Consumer Goods / Business Intelligence</p>
+          <h2>Consumer Goods Insights using SQL & Tableau</h2>
+          <p><strong>Domain/Function:</strong> Consumer Goods / Business Intelligence</p>
           <p>
             This project delivers actionable business insights for <strong>Atliq Hardware</strong>, a global consumer electronics brand, by solving 10 real-world business questions using <strong>MySQL</strong> and visualizing the results in <strong>Tableau</strong>. The goal was to assist business stakeholders in making faster decisions across sales, product, and market strategy using a clean, analysis-ready relational dataset.
           </p>
-       
+          <div class="project-links">
+            <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_dataanalytics-sql-tableau-activity-..." target="_blank" class="linkedin-btn">LinkedIn</a>
+            <a href="https://github.com/KapuluruBhuvaneswariVspdbct" target="_blank" class="github-btn">GitHub</a>
+          </div>
         </div>
         <div class="carousel">
           <img src="e6b30287-99c6-4842-889b-d615372ef1e4-5 - Copy.jpg" alt="Retail Dashboard 1" height="330px" width="200px">
@@ -1553,8 +1534,11 @@ body {
             <li>Top 5 Indian customers by average discount percentage</li>
             <li>Monthly gross sales trend analysis</li>
             <li>Quarter-wise volume analysis (2020)</li>
+            <li>Channel performance & contribution in 2021</li>
+            <li>Top 3 high-performing products in each division</li>
           </ul>
-           </div>
+          <p><strong>Skills Used:</strong> MySQL, Tableau, Joins, CTEs, Window Functions, Aggregations, Grouping, and Data Storytelling.</p>
+        </div>
         <div class="youtube-thumb">
           <iframe 
             width="100%" 
@@ -1569,49 +1553,68 @@ body {
       </div>
 
       <!-- Row 3 – Tableau Dashboard Embed -->
-      <h3>LIVE DASHBOARD</h3>
-      <div class="grid-row row-3">
-        <div class='tableauPlaceholder' id='viz1751131283986' style='position: relative'>
-          <noscript>
-            <a href='https://public.tableau.com/views/SALES-INSIGHTS-TABLEAU/Dashboard1'>
-              <img alt='Dashboard 1' src='https://public.tableau.com/static/images/SA/SALES-INSIGHTS-TABLEAU/Dashboard1/1_rss.png' style='border: none' />
-            </a>
-          </noscript>
-          <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='SALES-INSIGHTS-TABLEAU/Dashboard1' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/SA/SALES-INSIGHTS-TABLEAU/Dashboard1/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-          </object>
-        </div>
-        <script type='text/javascript'>
-          var divElement = document.getElementById('viz1751131283986');
-          var vizElement = divElement.getElementsByTagName('object')[0];
-          if (divElement.offsetWidth > 800) {
-            vizElement.style.width = '1000px';
-            vizElement.style.height = '727px';
-          } else {
-            vizElement.style.width = '100%';
-            vizElement.style.height = '727px';
-          }
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-      </div>
+    <!-- Row 3 – Tableau Dashboard Embed with Sidebar Buttons -->
+<div class="grid-row row-3">
+  <div id="tableauContainer" style="display: flex; width: 100%; height: 80vh;">
+    
+    <!-- Left Column – Buttons -->
+    <div class="dashboard-controls" style="width: 200px; padding: 20px; background-color: #f8f8f8;">
+      <button onclick="loadDashboard('products')" style="width: 100%; margin-bottom: 10px;">Products</button>
+      <button onclick="loadDashboard('sales')" style="width: 100%; margin-bottom: 10px;">Sales</button>
+      <button onclick="loadDashboard('customer')" style="width: 100%;">Customer</button>
+    </div>
 
+    <!-- Right Column – Tableau Dashboard -->
+    <div style="flex-grow: 1; height: 100%;">
+      <object class="tableauViz" id="tableauViz" style="width: 100%; height: 100%;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="toolbar" value="yes" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+      </object>
     </div>
   </div>
-</div> close button o n this card to close
+
+  <script type="text/javascript">
+    const dashboards = {
+      products: "views/products_dashboard4/products_dashboard",
+      sales: "views/sales_dashboard1/sales_dashboard",
+      customer: "views/customer_dashboard1/customer_dashboard"
+    };
+
+    function loadDashboard(type) {
+      const viz = document.getElementById("tableauViz");
+
+      viz.innerHTML = `
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="path" value="${dashboards[type]}" />
+        <param name="toolbar" value="yes" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-US" />
+      `;
+
+      const script = document.createElement("script");
+      script.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+      viz.parentNode.insertBefore(script, viz);
+    }
+
+    // Load default on start
+    window.onload = () => loadDashboard("products");
+  </script>
+</div>
+</div>
+</div>
+</div>
 <div id="modal2" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modal2')">&times;</span>
