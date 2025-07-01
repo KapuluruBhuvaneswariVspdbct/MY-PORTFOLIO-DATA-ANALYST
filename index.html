@@ -1392,6 +1392,52 @@ body {
 .close-modal:hover {
   color: #ff4e4e;
 }
+/* Container styling */
+#tableauContainer {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+
+/* Left controls panel */
+.dashboard-controls {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Buttons style */
+.dashboard-controls button {
+  flex: 1;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.dashboard-controls button:hover {
+  background-color: #3730a3;
+}
+
+/* Right side Tableau dashboard container */
+#vizContainer {
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* Embedded Tableau visualization */
+#tableauVizContainer object.tableauViz {
+  width: 100%;
+  height: 100%;
+}
 
   .linkedin-btn { background-color: #0077B5; }
   .github-btn { background-color: #2ea44f; }
@@ -1588,7 +1634,7 @@ body {
 
   <script type="text/javascript">
     const dashboards = {
-      products: "views/products_dashboard4/products_dashboard",
+      products: "views/products_17513385452750/products_dashboard",
       customer: "views/customer_17513371633200/customerdashboard",
       yearly: "views/year_17513373303450/year_wise_analysis"
     };
