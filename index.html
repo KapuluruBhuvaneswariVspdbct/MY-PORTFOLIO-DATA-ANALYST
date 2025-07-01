@@ -1528,13 +1528,23 @@ body {
   <div class="projects-container">
 
     <!-- Project Card 1 -->
-    <div class="project-card">
-      <img src="eiah.png" alt="Online Retail Analysis">
-      <h4>Online Retail Analysis</h4>
-      <p class="domain">Domain/Function: <span>Customer Behavior Analytics</span></p>
-      <p>This project analyzes over 500,000 retail transactions using EDA, RFM , churn prediction to guide customer retention strategies.</p>
-      <button onclick="openModal('modal1')">See My Work</button>
+ <div class="project-card" style="position: relative; width: 400px;">
+  <img src="eiah.png" alt="Executive Insights Thumbnail" style="height: 400px; width: 100%; object-fit: cover; border-radius: 8px;">
+  
+  <h4>Executive Insights for Atliq Hardware</h4>
+  <p class="domain">Domain/Function: <span>Business Intelligence / Consumer Goods</span></p>
+  <p>This project delivers actionable insights using SQL & Tableau by solving 10 real-world business questions for strategic decisions in sales, products, and markets.</p>
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <button onclick="openModal('modal1')" style="padding: 8px 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer;">See My Work</button>
+    
+    <!-- SQL & Tableau Logos (from CDN) -->
+    <div style="display: flex; gap: 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="SQL Logo" title="SQL" style="height: 30px; width: 30px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" alt="Tableau Logo" title="Tableau" style="height: 30px; width: 30px;">
     </div>
+  </div>
+</div>
 
     <!-- Project Card 2 -->
     <div class="project-card">
