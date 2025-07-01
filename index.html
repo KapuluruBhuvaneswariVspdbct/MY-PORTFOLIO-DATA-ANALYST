@@ -1721,9 +1721,17 @@ body {
         </div>
         <div class="carousel" style="display: flex; gap: 15px; flex-wrap: wrap;">
    <img src="online2.png" alt="Heatmap" height="350px">
-          <img src="online3.png" alt="Quarter Trend" height="350px">
-          <img src="online4.png" alt="RFM Matrix" height="350px">
-          <img src="online5.png" alt="Churn Insight" height="350px">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-0.jpg" alt="Img 0" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-1.jpg" alt="Img 1" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-2.jpg" alt="Img 2" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-3.jpg" alt="Img 3" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-4.jpg" alt="Img 4" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-5.jpg" alt="Img 5" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-6.jpg" alt="Img 6" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-7.jpg" alt="Img 7" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-8.jpg" alt="Img 8" height="350">
+<img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-9.jpg" alt="Img 9" height="350">
+
   </div>
       </div>
 
@@ -1754,16 +1762,31 @@ body {
       </div>
 
       <!-- Row 3 – Static Analysis Images -->
-      <h3 style="color:#5C5470">KEY VISUALS</h3>
-      <div class="grid-row row-3">
-          <div class="carouselk" style="display: flex; gap: 15px; flex-wrap: wrap;">
-<img src="online3.png" alt="Quarter Trend" height="520px" width="800px">
-<img src="online4.png" alt="RFM Matrix" height="520px" width="800px">
-<img src="online5.png" alt="Churn Insight" height="520px" width="800px">
+   <h3 style="color:#5C5470">KEY VISUALS</h3>
 
+<div class="grid-row row-3" style="display: flex; width: 100%; margin-top: 20px;">
+  
+  <!-- Buttons Section -->
+  <div style="width: 220px; display: flex; flex-direction: column; gap: 15px; background-color: #f5f5f5; padding: 15px; border-radius: 10px;">
+    <button onclick="showVisual('online3.png')" style="padding: 10px; font-size: 16px;">📈 Quarter Trend</button>
+    <button onclick="showVisual('online4.png')" style="padding: 10px; font-size: 16px;">📊 RFM Matrix</button>
+    <button onclick="showVisual('online5.png')" style="padding: 10px; font-size: 16px;">🔁 Churn Insight</button>
+  </div>
 
-          </div>
-      </div>
+  <!-- Image Display Section -->
+  <div style="flex-grow: 1; text-align: center; padding-left: 30px;">
+    <img id="visualDisplay" src="online3.png" alt="Insight Visual" width="800" height="520" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+  </div>
+
+</div>
+
+<!-- JS -->
+<script>
+  function showVisual(imageSrc) {
+    document.getElementById('visualDisplay').src = imageSrc;
+  }
+</script>
+
     </div>
   </div>
 </div>
