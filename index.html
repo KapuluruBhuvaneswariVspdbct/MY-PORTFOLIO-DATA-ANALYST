@@ -667,7 +667,11 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.carouselk {
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
 .carousel img {
   max-width: 600px;
   border-radius: 12px;
@@ -1716,10 +1720,10 @@ body {
           </p>
         </div>
         <div class="carousel" style="display: flex; gap: 15px; flex-wrap: wrap;">
-   <img src="online2.png" alt="Heatmap" height="250px">
-          <img src="online3.png" alt="Quarter Trend" height="250px">
-          <img src="online4.png" alt="RFM Matrix" height="250px">
-          <img src="online5.png" alt="Churn Insight" height="250px">
+   <img src="online2.png" alt="Heatmap" height="350px">
+          <img src="online3.png" alt="Quarter Trend" height="350px">
+          <img src="online4.png" alt="RFM Matrix" height="350px">
+          <img src="online5.png" alt="Churn Insight" height="350px">
   </div>
       </div>
 
@@ -1752,7 +1756,7 @@ body {
       <!-- Row 3 – Static Analysis Images -->
       <h3 style="color:#5C5470">KEY VISUALS</h3>
       <div class="grid-row row-3">
-          <div class="carousel" style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <div class="carouselk" style="display: flex; gap: 15px; flex-wrap: wrap;">
  <img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-0.jpg" alt="Img 0" width="1000" height="800">
   <img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-1.jpg" alt="Img 1" width="1000" height="800">
   <img src="2b8638a0-2125-42d2-ac02-8f95b4ac4f6c-2.jpg" alt="Img 2" width="1000" height="800">
@@ -1913,6 +1917,16 @@ body {
   carousels.forEach(carousel => {
     let index = 0;
     const images = carousel.querySelectorAll('img');
+    setInterval(() => {
+      images.forEach(img => img.style.display = 'none');
+      images[index].style.display = 'block';
+      index = (index + 1) % images.length;
+    }, 2000);
+  });
+     const carouselsk = document.querySelectorAll('.carouselk');
+  carouselsk.forEach(carouselk => {
+    let index = 0;
+    const images = carouselk.querySelectorAll('img');
     setInterval(() => {
       images.forEach(img => img.style.display = 'none');
       images[index].style.display = 'block';
