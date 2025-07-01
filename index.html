@@ -1558,13 +1558,25 @@ body {
 </div>
 
     <!-- Project Card 2 -->
-    <div class="project-card">
-      <img src="amareview.png" alt="Amazon Reviews Analysis">
-      <h4>Amazon Reviews Analysis</h4>
-      <p class="domain">Domain/Function: <span>Text Mining</span></p>
-      <p>This project processes thousands of product reviews to identify sentiment patterns and customer satisfaction insights using NLP.</p>
-      <button onclick="openModal('modal2')">See My Work</button>
+<div class="project-card">
+  <img src="onliner.png" alt="Online Retail Analysis" style="width:100%; max-height:250px; object-fit:cover; border-radius:8px;">
+  
+  <h4>Online Retail Analysis</h4>
+  <p class="domain">Domain/Function: <span>Customer Behavior Analytics</span></p>
+  <p>
+    This project analyzes over 500,000 transactions to uncover customer patterns using RFM segmentation, churn prediction, and exploratory data analysis.
+  </p>
+
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+    <button onclick="openModal('modal1')" style="padding: 10px 16px;">See My Work</button>
+    
+    <div style="display: flex; gap: 10px;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="80" height="80">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" width="80" height="80">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" width="80" height="80">
     </div>
+  </div>
+</div>
 
     <!-- Project Card 3 -->
     <div class="project-card">
@@ -1762,25 +1774,25 @@ body {
       </div>
 
       <!-- Row 3 – Static Analysis Images -->
-   <h3 style="color:#5C5470">KEY VISUALS</h3>
+<h3 style="color:#5C5470">KEY VISUALS</h3>
 
 <div class="grid-row row-3" style="display: flex; width: 100%; margin-top: 20px;">
-  
+
   <!-- Buttons Section -->
-  <div style="width: 220px; display: flex; flex-direction: column; gap: 15px; background-color: #f5f5f5; padding: 15px; border-radius: 10px;">
-    <button onclick="showVisual('online3.png')" style="padding: 10px; font-size: 16px;">📈 Quarter Trend</button>
-    <button onclick="showVisual('online4.png')" style="padding: 10px; font-size: 16px;">📊 RFM Matrix</button>
-    <button onclick="showVisual('online5.png')" style="padding: 10px; font-size: 16px;">🔁 Churn Insight</button>
+  <div style="width: 240px; display: flex; flex-direction: column; gap: 15px; background-color: #f5f5f5; padding: 15px; border-radius: 10px;">
+    <button onclick="showVisual('42.png')" style="padding: 12px; font-size: 16px;">📈 Month-wise Sales</button>
+    <button onclick="showVisual('43.png')" style="padding: 12px; font-size: 16px;">🌍 Top 5 Countries - Bar</button>
+    <button onclick="showVisual('44.png')" style="padding: 12px; font-size: 16px;">🥧 Top 5 Countries - Pie</button>
+    <button onclick="showVisual('53.png')" style="padding: 12px; font-size: 16px;">🔁 RFM Segments</button>
+    <button onclick="showVisual('54.png')" style="padding: 12px; font-size: 16px;">📊 RFM Total Distribution</button>
   </div>
 
   <!-- Image Display Section -->
   <div style="flex-grow: 1; text-align: center; padding-left: 30px;">
-    <img id="visualDisplay" src="online3.png" alt="Insight Visual" width="800" height="520" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+    <img id="visualDisplay" src="42.png" alt="Insight Visual" width="800" height="520" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
   </div>
-
 </div>
 
-<!-- JS -->
 <script>
   function showVisual(imageSrc) {
     document.getElementById('visualDisplay').src = imageSrc;
