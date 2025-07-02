@@ -1903,6 +1903,75 @@ body {
     </div>
   </div>
 </div>
+  <div id="modal4" class="modal">
+  <div class="modal-content" style="background-color: #F0F4F8">
+    <span class="close-modal" onclick="document.getElementById('modal4').style.display='none'">&times;</span>
+
+    <div class="modal-grid">
+      <!-- Header Section -->
+      <h2 style="color:#2F4F4F">IBM HR ANALYTICS DASHBOARD</h2>
+      <p><strong>Skills Used:</strong> Tableau (Interactive Dashboards), Data Analysis, HR Domain Knowledge</p>
+
+      <div class="project-links">
+        <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_genderdashboard-activity-7346221843466317826-qbeI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEy_JYkBoNioJp_jgEL0gka0f68J6L4jAWM" target="_blank" class="linkedin-btn">LinkedIn</a>
+        <a href="https://github.com" target="_blank" class="github-btn">GitHub</a>
+      </div>
+
+      <!-- Row 1 – Project Overview -->
+      <div class="grid-row row-1" style="display: flex; gap: 30px; flex-wrap: wrap;">
+        <div class="info" style="flex: 1; min-width: 300px;">
+          <p style="color:#2F4F4F"><strong>Domain:</strong> Human Resources</p>
+          <p style="color:#2F4F4F"><strong>Function:</strong> Workforce Analytics & Attrition Insights</p>
+          <p>
+            This project analyzes IBM HR employee data to uncover key insights around employee attrition, job roles, satisfaction levels, and workforce demographics. Dashboards were built using Tableau to provide clear, interactive visuals for strategic HR decision-making.
+          </p>
+        </div>
+        <div class="info" style="flex: 1; min-width: 300px;">
+          <h3 style="color:#2F4F4F">Key Insights</h3>
+          <ul>
+            <li>Gender-wise attrition breakdown</li>
+            <li>Job role performance and retention rates</li>
+            <li>Marital status impact on attrition</li>
+            <li>Department-level satisfaction analysis</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Row 2 – Interactive Carousel for Dashboards -->
+      <h3 style="color:#2F4F4F">KEY DASHBOARDS</h3>
+      <div class="grid-row row-2" style="display: flex; width: 100%; margin-top: 20px;">
+
+        <!-- Buttons Section -->
+        <div style="width: 260px; display: flex; flex-direction: column; gap: 15px; background-color:#ADD8E6; padding: 15px; border-radius: 10px;">
+          <button onclick="showDashboard('gender')" style="padding: 12px; font-size: 16px;">🚻 Gender Dashboard</button> 
+          <button onclick="showDashboard('job')" style="padding: 12px; font-size: 16px;">💼 Job Dashboard</button> 
+          <button onclick="showDashboard('marital')" style="padding: 12px; font-size: 16px;">❤️ Marital Status Dashboard</button> 
+        </div>
+
+        <!-- Tableau Display Section -->
+        <div style="flex-grow: 1; text-align: center; padding-left: 30px;">
+          <iframe id="dashboardFrame" src="https://public.tableau.com/views/gender_dashboard_17514741069920/gender_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
+            width="1000" height="520" frameborder="0" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+          </iframe>
+        </div>
+      </div>
+
+      <script>
+        function showDashboard(type) {
+          let frame = document.getElementById('dashboardFrame');
+          if (type === 'gender') {
+            frame.src = "https://public.tableau.com/views/gender_dashboard_17514741069920/gender_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+          } else if (type === 'job') {
+            frame.src = "https://public.tableau.com/views/job_dashboard_17514741857490/job_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+          } else if (type === 'marital') {
+            frame.src = "https://public.tableau.com/views/job_dashboard_17514741857490/job_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
+          }
+        }
+      </script>
+    </div>
+  </div>
+</div>
+
 
 </section>
 <section class="experience-section">
