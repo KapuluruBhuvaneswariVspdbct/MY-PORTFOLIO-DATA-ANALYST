@@ -1445,11 +1445,11 @@ body {
 }
 
 /* Embedded Tableau visualization */
-#tableauVizContainer object.tableauViz {
+#tableauVizContainerModal4 object.tableauViz {
   width: 100%;
   height: 100%;
 }
-#tableauVizContainer object.tableauViz {
+#tableauVizContainerModal1 object.tableauViz {
   width: 100%;
   height: 100%;
 }
@@ -1924,7 +1924,7 @@ body {
 
 
     function loadDashboardModal4(type) {
-      const container = document.getElementById('tableauVizContainer');
+      const container = document.getElementById('tableauVizContainerModal1');
       container.innerHTML = `
         <noscript>
           <a href="https://public.tableau.com/${dashboards[type]}">
