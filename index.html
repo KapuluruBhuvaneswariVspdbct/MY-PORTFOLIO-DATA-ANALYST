@@ -1972,9 +1972,9 @@ body {
 
     <!-- Left Column – Full-Height Buttons -->
     <div class="dashboard-controls" style="width: 200px; padding: 0; background-color: #06923E; display: flex; flex-direction: column;">
-      <button onclick="loadDashboard('job')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color:  #06923E; color: white; cursor: pointer;">📦 Products</button>
-      <button onclick="loadDashboard('gender')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">👥 Customers</button>
-      <button onclick="loadDashboard('marital')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">📈 Yearly Analysis</button>
+      <button onclick="loadDashboard('job')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color:  #06923E; color: white; cursor: pointer;">📦 job</button>
+      <button onclick="loadDashboard('gender')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">👥 gender</button>
+      <button onclick="loadDashboard('marital')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">📈 marital status</button>
     </div>
 
     <!-- Right Column – Tableau Viz -->
@@ -1985,9 +1985,9 @@ body {
 
   <script type="text/javascript">
     const dashboards = {
-      job: "views/gender_dashboard_17514741069920/gender_dashboard",
-      gender: "views/customer_17513371633200/customerdashboard",
-      marital: "views/year_17513373303450/year_wise_analysis"
+      job: "views/job_dashboard_17514741857490/job_dashboard",
+      gender: "views/gender_dashboard_17514741069920/gender_dashboard",
+      marital: "views/marital_status_dashboard/marital_status_dashboard"
     };
 
     function loadDashboard(type) {
