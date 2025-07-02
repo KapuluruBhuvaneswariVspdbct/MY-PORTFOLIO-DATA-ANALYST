@@ -12,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Font: Cavita and Lato (fallback for Lavish) -->
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lato&display=swap" rel="stylesheet">
-
+<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
 <!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -1603,23 +1603,24 @@ body {
 </div> 
   
 
- <div class="project-card" style="position: relative; width: 5000px;">
-  <img src="ibm_thumb.png" alt="Executive Insights Thumbnail" style="height: 290px; width: 450px; object-fit: cover; border-radius: 0px;">
+<div class="project-card" style="position: relative; width: 100%; max-width: 500px; margin: auto; padding: 16px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  <img src="ibm_thumb.png" alt="IBM HR Analytics thumbnail" style="height: 290px; width: 100%; object-fit: cover; border-radius: 4px;">
+
   <h4>IBM HR Analytics</h4>
-<p><strong>Domain:</strong> Human Resources</p>
-<p><strong>Function:</strong> Workforce Analytics & Attrition</p>
+  <p><strong>Domain:</strong> Human Resources</p>
+  <p><strong>Function:</strong> Workforce Analytics & Attrition</p>
 
-<p>This project focuses on employee attrition analysis using Tableau dashboards, uncovering trends in gender, job roles, and marital status. The insights help HR leaders at IBM make informed, data-driven decisions to improve retention and workforce planning.</p>
+  <p>This project focuses on employee attrition analysis using Tableau dashboards, uncovering trends in gender, job roles, and marital status. The insights help HR leaders at IBM make informed, data-driven decisions to improve retention and workforce planning.</p>
 
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <button onclick="openModal('modal4')" style="padding: 8px 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer;">See My Work</button>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+    <button onclick="openModal('modal4')" style="padding: 8px 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer;" aria-label="Open IBM HR Analytics dashboard modal">See My Work</button>
     
-    <!-- SQL & Tableau Logos (from CDN) -->
     <div style="display: flex; gap: 6px;">
       <img src="https://tse3.mm.bing.net/th/id/OIP.9xGmPVQBgecuvVp8kxjwpwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tableau Logo" title="Tableau" style="height: 80px; width: 90px;">
     </div>
   </div>
 </div>
+
 
   </div>
 <div id="modal2" class="modal">
@@ -1904,110 +1905,109 @@ body {
 </div>
 
   
-  <div id="modal4" class="modal">
-  <div class="modal-content" style = "background-color: #FAF1E6">
-  <span class="close-modal" onclick="document.getElementById('modal4').style.display='none'">&times;</span>
+ <!-- Include this script ONCE, in the <head> or at the end of <body> -->
+<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
 
-    <div class="modal-grid">
-    
-       <h2 style="color:green">IBM HR ANALYTICS DASHBOARD USING TABLEAU</h2>
-<p><strong>Skills Used:</strong> Tableau, HR Data Analysis, Workforce Insights</p>
+<!-- MODAL STRUCTURE -->
+<div id="modal4" class="modal" style="display: none;">
+  <div class="modal-content" style="background-color: #FAF1E6; padding: 20px;">
+    <!-- Close Button -->
+    <span class="close-modal" onclick="document.getElementById('modal4').style.display='none'" style="font-size: 24px; cursor: pointer;">&times;</span>
 
-<div class="project-links">
-  <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_genderdashboard-activity-7346221843466317826-qbeI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEy_JYkBoNioJp_jgEL0gka0f68J6L4jAWM" target="_blank" class="linkedin-btn">LinkedIn</a>
-  <a href="https://github.com/KapuluruBhuvaneswariVspdbct/IBM_HR_ANALYTICS" target="_blank" class="github-btn">GitHub</a>
-</div>
+    <!-- Header Info -->
+    <h2 style="color: green;">IBM HR ANALYTICS DASHBOARD USING TABLEAU</h2>
+    <p><strong>Skills Used:</strong> Tableau, HR Data Analysis, Workforce Insights</p>
 
-      <!-- Row 1 – Intro & Carousel -->
-      <div class="grid-row row-1">
-        <div class="info" >
-  <p><strong>Domain:</strong> Human Resources</p>
-  <p><strong>Function:</strong> Workforce Analytics & Attrition Insights</p>   
-  <p>
-    This project provides actionable HR insights for <strong>IBM</strong> by analyzing employee attrition patterns using interactive <strong>Tableau</strong> dashboards. It explores workforce demographics, satisfaction levels, and job roles to help HR stakeholders make data-driven decisions and improve employee retention strategies.
-  </p>
-</div>
+    <!-- External Links -->
+    <div class="project-links" style="margin-bottom: 20px;">
+      <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_genderdashboard-activity-7346221843466317826-qbeI" target="_blank" class="linkedin-btn">LinkedIn</a>
+      <a href="https://github.com/KapuluruBhuvaneswariVspdbct/IBM_HR_ANALYTICS" target="_blank" class="github-btn">GitHub</a>
+    </div>
 
-
-   <div class="info">
-  <h3 style="color:green">Project Details</h3>
-  <p>This project focused on analyzing employee attrition trends through Tableau dashboards. It covered:</p>
-  <ul>
-    <li>Gender-wise attrition breakdown and comparison</li>
-    <li>Job role performance vs. attrition rates</li>
-    <li>Impact of marital status on employee retention</li>
-    <li>Department-wise satisfaction level analysis</li>
-    <li>Distribution of workforce by education and age</li>
-    <li>Identification of high-risk attrition segments</li>
-  </ul>
-</div>
-
-       
+    <!-- Description and Details -->
+    <div class="grid-row row-1" style="display: flex; gap: 40px; flex-wrap: wrap;">
+      <div class="info" style="flex: 1; min-width: 300px;">
+        <p><strong>Domain:</strong> Human Resources</p>
+        <p><strong>Function:</strong> Workforce Analytics & Attrition Insights</p>
+        <p>
+          This project provides actionable HR insights for <strong>IBM</strong> by analyzing employee attrition patterns using interactive <strong>Tableau</strong> dashboards. It explores workforce demographics, satisfaction levels, and job roles to help HR stakeholders make data-driven decisions and improve employee retention strategies.
+        </p>
       </div>
-      <!-- Row 3 – Tableau Dashboard Embed -->
-    <!-- Row 3 – Tableau Dashboard Embed with Sidebar Buttons -->
+
+      <div class="info" style="flex: 1; min-width: 300px;">
+        <h3 style="color: green;">Project Details</h3>
+        <ul>
+          <li>Gender-wise attrition breakdown and comparison</li>
+          <li>Job role performance vs. attrition rates</li>
+          <li>Impact of marital status on employee retention</li>
+          <li>Department-wise satisfaction level analysis</li>
+          <li>Distribution of workforce by education and age</li>
+          <li>Identification of high-risk attrition segments</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dashboard Embed -->
+    <h3 style="color: green; margin-top: 40px;">LIVE DASHBOARD</h3>
+    <div id="tableauContainer" style="display: flex; width: 100%; height: 90vh; margin-top: 10px;">
       
-      <h3 style="color:green">LIVE DASHBOARD</h3>
-<div class="grid-row row-3">
-  <div id="tableauContainer" style="display: flex; width: 100%; height: 90vh;">
+      <!-- Sidebar Buttons -->
+      <div class="dashboard-controls" style="width: 200px; background-color: #06923E; display: flex; flex-direction: column;">
+        <button onclick="loadDashboard('gender')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">🚻 Gender Dashboard</button>
+        <button onclick="loadDashboard('job')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">💼 Job Role Dashboard</button>
+        <button onclick="loadDashboard('marital')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">❤️ Marital Status Dashboard</button>
+      </div>
 
-    <!-- Left Column – Full-Height Buttons -->
-    <div class="dashboard-controls" style="width: 200px; padding: 0; background-color: #06923E; display: flex; flex-direction: column;">
-<button onclick="loadDashboard('gender')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">🚻 Gender Dashboard</button>
-<button onclick="loadDashboard('job')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">💼 Job Role Dashboard</button>
-<button onclick="loadDashboard('marital')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">❤️ Marital Status Dashboard</button>
-
-    <!-- Right Column – Tableau Viz -->
-    <div id="vizContainer" style="flex-grow: 1; height: 100%;">
-      <div class='tableauPlaceholder' id='tableauVizContainer' style='width: 100%; height: 100%;'></div>
+      <!-- Dashboard Display Container -->
+      <div id="vizContainer" style="flex-grow: 1; height: 100%;">
+        <div class="tableauPlaceholder" id="tableauVizContainer" style="width: 100%; height: 100%;"></div>
+      </div>
     </div>
   </div>
+</div>
 
-  <script type="text/javascript">
-const dashboards = {
-  gender: "views/YourWorkbookName/GenderDashboard?:language=en-US&:display_count=n&:origin=viz_share_link",
-  job: "views/job_dashboard_17514741857490/job_dashboard",
-  marital: "views/marital_status_dashboard/marital_status_dashboard"
-};
+<!-- JavaScript to Load Tableau Dashboards -->
+<script>
+  const dashboards = {
+    gender: "https://public.tableau.com/views/gender_dashboard_17514741069920/gender_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    job: "https://public.tableau.com/views/job_dashboard_17514741857490/job_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    marital: "https://public.tableau.com/views/marital_status_dashboard/marital_status_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+  };
 
+  function loadDashboard(type) {
+    const container = document.getElementById('tableauVizContainer');
+    container.innerHTML = `
+      <object class='tableauViz' style='width: 100%; height: 100%;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+        <param name='embed_code_version' value='3'/>
+        <param name='path' value='${dashboards[type]}'/>
+        <param name='toolbar' value='yes'/>
+        <param name='animate_transition' value='yes'/>
+        <param name='display_static_image' value='yes'/>
+        <param name='display_spinner' value='yes'/>
+        <param name='display_overlay' value='yes'/>
+        <param name='display_count' value='yes'/>
+        <param name='language' value='en-US'/>
+      </object>
+    `;
+  }
 
-
-    function loadDashboard(type) {
-      const container = document.getElementById('tableauVizContainer');
-      container.innerHTML = `
-        <noscript>
-          <a href="https://public.tableau.com/${dashboards[type]}">
-            <img alt="Dashboard" src="https://public.tableau.com/static/images/placeholder.png" />
-          </a>
-        </noscript>
-        <object class='tableauViz' style='width: 100%; height: 100%;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
-          <param name='embed_code_version' value='3'/>
-          <param name='path' value='${dashboards[type]}'/>
-          <param name='toolbar' value='yes'/>
-          <param name='animate_transition' value='yes'/>
-          <param name='display_static_image' value='yes'/>
-          <param name='display_spinner' value='yes'/>
-          <param name='display_overlay' value='yes'/>
-          <param name='display_count' value='yes'/>
-          <param name='language' value='en-US'/>
-        </object>
-      `;
-
-      // Reload Tableau script
-      const script = document.createElement('script');
-      script.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      container.appendChild(script);
+  // Optional: Load default dashboard when modal opens
+  document.getElementById('modal4').addEventListener('click', function (e) {
+    if (e.target.classList.contains('modal')) {
+      document.getElementById('modal4').style.display = 'none';
     }
+  });
 
-    // Load default dashboard
-    window.onload = () => loadDashboard('gender');
-  </script>
-</div>
+  // Load default when modal is shown manually
+  function showModal() {
+    document.getElementById('modal4').style.display = 'block';
+    loadDashboard('gender');
+  }
 
-</div>
-</div>
-</div>
+  // Call showModal() when needed (for example, button onclick)
+</script>
+
 </section>
 <section class="experience-section">
   <h2><strong>My</strong> <span>Experience</span></h2>
