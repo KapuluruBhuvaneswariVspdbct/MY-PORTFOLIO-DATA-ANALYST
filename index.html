@@ -1991,7 +1991,10 @@ body {
     }
 
     // Load default dashboard
-    window.onload = () => loadDashboard('gender');
+   document.addEventListener("DOMContentLoaded", function() {
+  loadDashboard('gender');
+});
+
   </script>
 </div>
 
