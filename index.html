@@ -1617,10 +1617,16 @@ body {
 
 <script>
   function openModal4() {
-    document.getElementById('modal4').style.display = 'block';
-    loadDashboard('gender'); // Load default dashboard when modal opens
+    const modal = document.getElementById('modal4');
+    modal.style.display = 'block';
+
+    // Wait until modal is visible, then load the dashboard
+    setTimeout(() => {
+      loadDashboard('gender');
+    }, 300); // delay ensures modal is fully rendered
   }
 </script>
+
 
     <div style="display: flex; gap: 7px;">
       <img src="https://tse3.mm.bing.net/th/id/OIP.9xGmPVQBgecuvVp8kxjwpwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tableau Icon" width="60" height="60">
