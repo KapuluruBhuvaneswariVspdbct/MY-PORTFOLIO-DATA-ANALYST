@@ -1581,7 +1581,7 @@ body {
   </div>
 </div>
 <div class="project-card">
-  <img src="salesinsights_thumbnail.png" alt="Sales Insights Excel Project" style="width:100%; max-height:250px; object-fit:cover; border-radius:8px;">
+  <img src="sales_insights_thumbnail.png" alt="Sales Insights Excel Project" style="width:100%; max-height:250px; object-fit:cover; border-radius:8px;">
   
   <h4>EXCEL – Sales Insights</h4>
   <p><strong>Domain:</strong> IT Hardware</p>
@@ -1822,57 +1822,68 @@ body {
     </div>
   </div>
 </div>
-
 <div id="modal3" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal3')">&times;</span>
+  <div class="modal-content" style="background-color: #FAF1E6">
+    <span class="close-modal" onclick="document.getElementById('modal3').style.display='none'">&times;</span>
 
-    <div class="project-header">
-      <h3>Engineering Journey Analysis</h3>
-       <div class="project-links">
-      <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_analyzed-placements-without-getting-activity-7341180174543028224-mCIP" target="_blank" title="LinkedIn Post">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/KapuluruBhuvaneswariVspdbct/ENGINEERING_JOURNEY_ANALYSIS" target="_blank" title="GitHub Repository">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-      <p><strong>Domain:</strong> Career Analytics (Education/Placement)</p>
-      <p><strong>Skills Used:</strong> Placement Prediction, Eligibility Logic, Data Visualization, Student Profiling , Matplotlib , Seaborn , </p>
-    </div>
-    <div class="project-body">
-      <!-- Left Section -->
-      <div class="project-left">
-    <div class="project-description">
-      <p>This project evaluates engineering students academic journeys to identify top performers, measure internship coverage, assess placement eligibility, and detect unplacement risk factors.</p>
-    </div>
-     <div class="project-points">
-      <ul>
-        <li>Analyzed placement & scholarship eligibility</li>
-        
-        <li>Visualized unplacement risk</li>
-        
-        <li>Evaluated performance across all semesters and Identified top 3 students </li>
-      </ul>
-    </div>
+    <div class="modal-grid">
+      <!-- Header Section -->
+      <h2 style="color:#5C5470">SALES INSIGHTS USING EXCEL</h2>
+      <p><strong>Skills Used:</strong> Excel (Pivot Tables, Charts, Data Cleaning), Word (Summary Reports)</p>
 
-</div>
-   <!-- Right Section -->
-      <div class="project-right">
-        <h4>My Work</h4>
-   <div class="carousel">
-      <img src="eng1.png" alt="Engineering Journey Analysis 1"height="350px" width="500px">
-      <img src="eng2.png" alt="Engineering Journey Analysis 1"height="350px" width="500px">
-      <img src="eng3.png" alt="Engineering Journey Analysis 1"height="350px" width="500px">
-      <img src="eng4.png" alt="Engineering Journey Analysis 1"height="350px" width="500px">
-      <img src="eng5.png" alt="Engineering Journey Analysis 1"height="350px" width="500px">
+      <div class="project-links">
+        <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb" target="_blank" class="linkedin-btn">LinkedIn</a>
+        <a href="https://github.com/KapuluruBhuvaneswariVspdbct/EXCEL-SALES-INSIGHTS" target="_blank" class="github-btn">GitHub</a>
+      </div>
+
+      <!-- Row 1 – Project Overview (Extended) -->
+      <div class="grid-row row-1" style="display: flex; gap: 30px; flex-wrap: wrap;">
+        <div class="info" style="flex: 1; min-width: 300px;">
+          <p><strong>Domain:</strong> IT Hardware</p>
+          <p><strong>Function:</strong> Sales & Financial Performance</p>
+          <p>
+            This project provides sales performance insights for an IT hardware company using Excel. It includes dynamic dashboards that evaluate market-wise and customer-wise sales performance, compare sales vs target, and break down profit & loss for strategic decisions. A professional summary report is included using Microsoft Word.
+          </p>
+        </div>
+        <div class="info" style="flex: 1; min-width: 300px;">
+          <h3 style="color:#5C5470">Key Insights</h3>
+          <ul>
+            <li>Market-wise performance vs sales target</li>
+            <li>Customer performance and profitability</li>
+            <li>Comprehensive P&L breakdown by region and fiscal year</li>
+            <li>Insights for cost optimization and strategy alignment</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Row 2 – Interactive Carousel for Key Insights -->
+      <h3 style="color:#5C5470">KEY VISUALS</h3>
+      <div class="grid-row row-2" style="display: flex; width: 100%; margin-top: 20px;">
+
+        <!-- Buttons Section -->
+        <div style="width: 260px; display: flex; flex-direction: column; gap: 15px; background-color: #f5f5f5; padding: 15px; border-radius: 10px;">
+          <button onclick="showSalesVisual('e1.png')" style="padding: 12px; font-size: 16px;">📊 Market vs Target</button> 
+          <button onclick="showSalesVisual('CUSTOMERPER.png')" style="padding: 12px; font-size: 16px;">👥 Customer Performance</button> 
+          <button onclick="showSalesVisual('PLMARKET.png')" style="padding: 12px; font-size: 16px;">🌍 P&L - Markets</button> 
+          <button onclick="showSalesVisual('PLFISCAL.png')" style="padding: 12px; font-size: 16px;">📅 P&L - Fiscal Year</button> 
+        </div>
+
+        <!-- Image Display Section -->
+        <div style="flex-grow: 1; text-align: center; padding-left: 30px;">
+          <img id="salesVisualDisplay" src="market_target.png" alt="Sales Visual" width="800" height="520" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+        </div>
+      </div>
+
+      <script>
+        function showSalesVisual(imageSrc) {
+          document.getElementById('salesVisualDisplay').src = imageSrc;
+        }
+      </script>
+
     </div>
- </div>
-</div>
-    
-   
   </div>
 </div>
+
 </section>
 <section class="experience-section">
   <h2><strong>My</strong> <span>Experience</span></h2>
