@@ -1673,7 +1673,7 @@ body {
 
       <!-- Right Column – Dashboard Embed -->
       <div id="vizContainer" style="flex-grow: 1; height: 100%; background-color: #fff;">
-        <div class="tableauPlaceholder" id="tableauVizContainer" style="width: 100%; height: 100%;"></div>
+      <div class='tableauPlaceholder' id='tableauVizContainerModal4'></div>
       </div>
     </div>
   </div>
@@ -1905,14 +1905,14 @@ body {
 
     <!-- Left Column – Full-Height Buttons -->
     <div class="dashboard-controls" style="width: 200px; padding: 0; background-color: #06923E; display: flex; flex-direction: column;">
-    <button onclick="loadDashboard('products')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color:  #06923E; color: white; cursor: pointer;">📦 Products</button>
-      <button onclick="loadDashboard('customer')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">👥 Customers</button>
-      <button onclick="loadDashboard('yearly')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">📈 Yearly Analysis</button>    </div>
+    <button onclick="loadDashboardModal1('products')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color:  #06923E; color: white; cursor: pointer;">📦 Products</button>
+      <button onclick="loadDashboardModal1('customer')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">👥 Customers</button>
+      <button onclick="loadDashboardModal1('yearly')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">📈 Yearly Analysis</button>    </div>
 
     <!-- Right Column – Tableau Viz -->
     <div id="vizContainer" style="flex-grow: 1; height: 100%;">
-      <div class='tableauPlaceholder' id='tableauVizContainer' style='width: 100%; height: 100%;'></div>
-    </div>
+     <div class='tableauPlaceholder' id='tableauVizContainerModal1'></div>
+   </div>
   </div>
 
   <script type="text/javascript">
@@ -1923,7 +1923,7 @@ body {
     };
 
 
-    function loadDashboard(type) {
+    function loadDashboardModal4(type) {
       const container = document.getElementById('tableauVizContainer');
       container.innerHTML = `
         <noscript>
@@ -1952,7 +1952,7 @@ body {
     }
 
     // Load default dashboard
-    window.onload = () => loadDashboard('gender');
+    window.onload = () => loadDashboardModal4('gender');
   </script>
 </div>
 
@@ -2046,7 +2046,7 @@ body {
     marital: "views/marital_status_dashboard/marital_status_dashboard"
   };
 
-  function loadDashboard(type) {
+  function loadDashboardModal4(type) {
     const container = document.getElementById('tableauVizContainer');
     container.innerHTML = `
       <object class='tableauViz' style='width: 100%; height: 100%;'>
@@ -2071,7 +2071,7 @@ body {
   // Optionally auto-load gender dashboard when modal opens
   function openModal(id) {
     document.getElementById(id).style.display = 'block';
-    if (id === 'modal4') loadDashboard('gender');
+    if (id === 'modal4') loadDashboardModal1('gender');
   }
 </script>
 <script>
@@ -2136,7 +2136,50 @@ body {
     if (id === 'modal4') loadDashboardModal4('gender');
   }
 </script>
+<script>
+  function loadDashboardModal1(type) {
+  const container = document.getElementById('tableauVizContainerModal1');
+  container.innerHTML = `
+    <object class='tableauViz' style='width: 100%; height: 100%;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+      <param name='embed_code_version' value='3'/>
+      <param name='path' value='${dashboardsModal1[type]}'/>
+      <param name='toolbar' value='yes'/>
+      <param name='animate_transition' value='yes'/>
+      <param name='display_static_image' value='yes'/>
+      <param name='display_spinner' value='yes'/>
+      <param name='display_overlay' value='yes'/>
+      <param name='display_count' value='yes'/>
+      <param name='language' value='en-US'/>
+    </object>
+  `;
+  const script = document.createElement('script');
+  script.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  container.appendChild(script);
+}
 
+function loadDashboardModal4(type) {
+  const container = document.getElementById('tableauVizContainerModal4');
+  container.innerHTML = `
+    <object class='tableauViz' style='width: 100%; height: 100%;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+      <param name='embed_code_version' value='3'/>
+      <param name='path' value='${dashboardsModal4[type]}'/>
+      <param name='toolbar' value='yes'/>
+      <param name='animate_transition' value='yes'/>
+      <param name='display_static_image' value='yes'/>
+      <param name='display_spinner' value='yes'/>
+      <param name='display_overlay' value='yes'/>
+      <param name='display_count' value='yes'/>
+      <param name='language' value='en-US'/>
+    </object>
+  `;
+  const script = document.createElement('script');
+  script.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  container.appendChild(script);
+}
+
+</script>
 </body>
 
 <script>
