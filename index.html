@@ -1921,7 +1921,7 @@ body {
 
 
     function loadDashboard(type) {
-      const container = document.getElementById('tableauVizContainer');
+      const container = document.getElementById('tableauVizContainerModal1');
       container.innerHTML = `
         <noscript>
           <a href="https://public.tableau.com/${dashboards[type]}">
@@ -2019,47 +2019,6 @@ body {
   </div>
 </div>
 
-<!-- JavaScript to Load Tableau Dashboards -->
-<script>
-  const dashboards = {
-    gender: "https://public.tableau.com/views/gender_dashboard_17514741069920/gender_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    job: "https://public.tableau.com/views/job_dashboard_17514741857490/job_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    marital: "https://public.tableau.com/views/marital_status_dashboard/marital_status_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-  };
-
-  function loadDashboard(type) {
-    const container = document.getElementById('tableauVizContainer');
-    container.innerHTML = `
-      <object class='tableauViz' style='width: 100%; height: 100%;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
-        <param name='embed_code_version' value='3'/>
-        <param name='path' value='${dashboards[type]}'/>
-        <param name='toolbar' value='yes'/>
-        <param name='animate_transition' value='yes'/>
-        <param name='display_static_image' value='yes'/>
-        <param name='display_spinner' value='yes'/>
-        <param name='display_overlay' value='yes'/>
-        <param name='display_count' value='yes'/>
-        <param name='language' value='en-US'/>
-      </object>
-    `;
-  }
-
-  // Optional: Load default dashboard when modal opens
-  document.getElementById('modal4').addEventListener('click', function (e) {
-    if (e.target.classList.contains('modal')) {
-      document.getElementById('modal4').style.display = 'none';
-    }
-  });
-
-  // Load default when modal is shown manually
-  function showModal() {
-    document.getElementById('modal4').style.display = 'block';
-    loadDashboard('gender');
-  }
-
-  // Call showModal() when needed (for example, button onclick)
-</script>
 
 </section>
 <section class="experience-section">
@@ -2174,7 +2133,7 @@ body {
   };
 
   function loadDashboardModal1(type) {
-    const container = document.getElementById('tableauVizContainerModal1');
+    const container = document.getElementById('tableauVizContainer');
     container.innerHTML = `
       <object class='tableauViz' style='width: 100%; height: 100%;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
@@ -2202,7 +2161,7 @@ body {
   };
 
   function loadDashboardModal4(type) {
-    const container = document.getElementById('tableauVizContainerModal4');
+    const container = document.getElementById('tableauVizContainer');
     container.innerHTML = `
       <object class='tableauViz' style='width: 100%; height: 100%;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
