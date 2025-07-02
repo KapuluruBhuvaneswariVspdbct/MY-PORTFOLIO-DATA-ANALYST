@@ -1938,41 +1938,67 @@ body {
       </div>
 
       <!-- Row 2 – Interactive Carousel for Dashboards -->
-      <h3 style="color:#2F4F4F">KEY DASHBOARDS</h3>
-      <div class="grid-row row-2" style="display: flex; width: 100%; margin-top: 20px;">
+       
+      <h3 style="color:green">LIVE DASHBOARD</h3>
+<div class="grid-row row-3">
+  <div id="tableauContainer" style="display: flex; width: 100%; height: 90vh;">
 
-        <!-- Buttons Section -->
-        <div style="width: 260px; display: flex; flex-direction: column; gap: 15px; background-color:#ADD8E6; padding: 15px; border-radius: 10px;">
-          <button onclick="showDashboard('gender')" style="padding: 12px; font-size: 16px;">🚻 Gender Dashboard</button> 
-          <button onclick="showDashboard('job')" style="padding: 12px; font-size: 16px;">💼 Job Dashboard</button> 
-          <button onclick="showDashboard('marital')" style="padding: 12px; font-size: 16px;">❤️ Marital Status Dashboard</button> 
-        </div>
+    <!-- Left Column – Full-Height Buttons -->
+    <div class="dashboard-controls" style="width: 200px; padding: 0; background-color: #06923E; display: flex; flex-direction: column;">
+      <button onclick="loadDashboard('products')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color:  #06923E; color: white; cursor: pointer;">📦 Products</button>
+      <button onclick="loadDashboard('customer')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">👥 Customers</button>
+      <button onclick="loadDashboard('yearly')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">📈 Yearly Analysis</button>
+    </div>
 
-        <!-- Tableau Display Section -->
-        <div style="flex-grow: 1; text-align: center; padding-left: 30px;">
-          <iframe id="dashboardFrame" src="https://public.tableau.com/views/gender_dashboard_17514741069920/gender_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
-            width="1000" height="520" frameborder="0" style="border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
-          </iframe>
-        </div>
-      </div>
-
-      <script>
-        function showDashboard(type) {
-          let frame = document.getElementById('dashboardFrame');
-          if (type === 'gender') {
-            frame.src = "https://public.tableau.com/views/gender_dashboard_17514741069920/gender_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
-          } else if (type === 'job') {
-            frame.src = "https://public.tableau.com/views/job_dashboard_17514741857490/job_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
-          } else if (type === 'marital') {
-            frame.src = "https://public.tableau.com/views/job_dashboard_17514741857490/job_dashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link";
-          }
-        }
-      </script>
+    <!-- Right Column – Tableau Viz -->
+    <div id="vizContainer" style="flex-grow: 1; height: 100%;">
+      <div class='tableauPlaceholder' id='tableauVizContainer' style='width: 100%; height: 100%;'></div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    const dashboards = {
+      products: "views/products_17513385452750/products_dashboard",
+      customer: "views/customer_17513371633200/customerdashboard",
+      yearly: "views/year_17513373303450/year_wise_analysis"
+    };
+
+    function loadDashboard(type) {
+      const container = document.getElementById('tableauVizContainer');
+      container.innerHTML = `
+        <noscript>
+          <a href="https://public.tableau.com/${dashboards[type]}">
+            <img alt="Dashboard" src="https://public.tableau.com/static/images/placeholder.png" />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='width: 100%; height: 100%;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+          <param name='embed_code_version' value='3'/>
+          <param name='path' value='${dashboards[type]}'/>
+          <param name='toolbar' value='yes'/>
+          <param name='animate_transition' value='yes'/>
+          <param name='display_static_image' value='yes'/>
+          <param name='display_spinner' value='yes'/>
+          <param name='display_overlay' value='yes'/>
+          <param name='display_count' value='yes'/>
+          <param name='language' value='en-US'/>
+        </object>
+      `;
+
+      // Reload Tableau script
+      const script = document.createElement('script');
+      script.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      container.appendChild(script);
+    }
+
+    // Load default dashboard
+    window.onload = () => loadDashboard('products');
+  </script>
 </div>
 
-
+</div>
+</div>
+</div>
 </section>
 <section class="experience-section">
   <h2><strong>My</strong> <span>Experience</span></h2>
