@@ -1842,16 +1842,15 @@ body {
       <!-- Row 3 – Tableau Dashboard Embed -->
     <!-- Row 3 – Tableau Dashboard Embed with Sidebar Buttons -->
       
-      <h3 style="color:green">MAIN DASHBOARD</h3>
+      <h3 style="color:green">LIVE DASHBOARD</h3>
 <div class="grid-row row-3">
   <div id="tableauContainer" style="display: flex; width: 100%; height: 90vh;">
 
     <!-- Left Column – Full-Height Buttons -->
     <div class="dashboard-controls" style="width: 200px; padding: 0; background-color: #06923E; display: flex; flex-direction: column;">
-      <button onclick="loadDashboard('job')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color:  #06923E; color: white; cursor: pointer;">📦 job</button>
-      <button onclick="loadDashboard('gender')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">👥 gender</button>
-      <button onclick="loadDashboard('marital')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">📈 marital status</button>
-    </div>
+    <button onclick="loadDashboard('products')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color:  #06923E; color: white; cursor: pointer;">📦 Products</button>
+      <button onclick="loadDashboard('customer')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">👥 Customers</button>
+      <button onclick="loadDashboard('yearly')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">📈 Yearly Analysis</button>    </div>
 
     <!-- Right Column – Tableau Viz -->
     <div id="vizContainer" style="flex-grow: 1; height: 100%;">
@@ -1860,11 +1859,12 @@ body {
   </div>
 
   <script type="text/javascript">
-    const dashboards = {
-      job: "views/job_dashboard_17514741857490/job_dashboard",
-      gender: "views/gender_dashboard_17514741069920/gender_dashboard",
-      marital: "views/marital_status_dashboard/marital_status_dashboard"
+      const dashboards = {
+      products: "views/products_17513385452750/products_dashboard",
+      customer: "views/customer_17513371633200/customerdashboard",
+      yearly: "views/year_17513373303450/year_wise_analysis"
     };
+
 
     function loadDashboard(type) {
       const container = document.getElementById('tableauVizContainer');
