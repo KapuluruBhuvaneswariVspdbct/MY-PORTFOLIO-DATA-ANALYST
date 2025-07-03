@@ -205,6 +205,7 @@ body {
     }
     .linkedin-icon img {
       background-color: #a1ff78;
+      
     }
     .github-icon img {
       background-color: #f6fe7f;
@@ -1491,13 +1492,13 @@ object.tableauViz {
       <h2>Hello, I am 👋</h2>
 
       <h1>Bhuvaneswari Kapuluru</h1>
-      <h4>Aspiring AI Engineer</h4>
+      <h4>Aspiring  Data Analyst</h4>
       <div class="hero-icons">
         <a href="https://www.linkedin.com/in/bhuvaneswari-kapuluru-2892682bb/" class="linkedin-icon" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"  height=80px  width=80px alt="LinkedIn">
         </a>
         <a href="https://github.com/KapuluruBhuvaneswariVspdbct" class="github-icon" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png"  height=80px  width=80px alt="GitHub">
         </a>
       </div>
     </div>
@@ -1518,10 +1519,10 @@ object.tableauViz {
       </div>
     </div>
     <div class="skill-item">
-      <img src="https://img.icons8.com/color/96/000000/power-bi.png" alt="Power BI" />
+      <img src="https://www.bing.com/images/search?view=detailV2&ccid=fruUvcG%2b&id=E0E3F26E38BD7E97717B0F426104103BE675FBA4&thid=OIP.fruUvcG-BwmcACPLnf734wHaEK&mediaurl=https%3a%2f%2flogo-marque.com%2fwp-content%2fuploads%2f2021%2f10%2fTableau-Symbole.jpg&exph=1080&expw=1920&q=tableau++logo+downloaxd&FORM=IRPRST&ck=9FC42C4245E2EA4239B969443576B32B&selectedIndex=9&itb=0" alt="Taleau" />
       <div>
-        <h5>3</h5>
-        <p>PowerBI<br>Projects</p>
+        <h5>2</h5>
+        <p>Tableau<br>Projects</p>
       </div>
     </div>
     <div class="skill-item">
@@ -1534,7 +1535,7 @@ object.tableauViz {
     <div class="skill-item">
       <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />
       <div>
-        <h5>3</h5>
+        <h5>1</h5>
         <p>Data Analysis<br>Projects</p>
       </div>
     </div>
@@ -1544,23 +1545,36 @@ object.tableauViz {
  
 <section class="about-me">
   <h2><strong>About</strong> <span>Me</span></h2>
-  <p>Hi! I’m Bhuvaneswari Kapuluru, an aspiring AI engineer who loves transforming data into impactful solutions.</p>
-  <p>I focus on turning raw data and models into powerful tools that make smarter, faster decisions.</p>
-  <p>Whether I’m diving into deep learning, NLP models, or predictive analytics, I love solving real-world problems with AI.</p>
-  <p>I’m a lifelong learner—constantly building projects and upskilling across domains.</p>
-  <p>If you're looking for someone who can turn complex systems into smart solutions, let’s connect!</p>
+  <p>Hello! I’m Bhuvaneswari Kapuluru—a curious mind passionate about uncovering insights through data.</p>
+  <p>I specialize in translating complex datasets into clear, actionable stories that drive strategic decisions.</p>
+  <p>From Excel dashboards to SQL queries and Python-powered visualizations, I enjoy exploring patterns that spark innovation.</p>
+  <p>With every project, I aim to bridge the gap between raw data and real-world impact—whether in business performance, customer behavior, or operational efficiency.</p>
+  <p>If you believe data has the power to tell stories and shape decisions, I’d love to collaborate and create something meaningful!</p>
 </section>
+
 
   <section class="skills-section">
     
   <h2><strong>Key</strong> <span>Skills</span></h2>
-  <div class="skills-buttons">
-    <button onclick="addSkill('Python')">Python</button>
-    <button onclick="addSkill('Pandas')">Pandas</button>
-    <button onclick="addSkill('NumPy')">NumPy</button>
-    <button onclick="addSkill('Matplotlib')">Matplotlib</button>
-    <button onclick="addSkill('EDA')">EDA</button>
-  </div>
+ <div class="skills-buttons">
+  <button onclick="addSkill('Excel')">Excel</button>
+  <button onclick="addSkill('SQL')">SQL</button>
+  <button onclick="addSkill('Python')">Python</button>
+  <button onclick="addSkill('Tableau')">Tableau</button>
+  <button onclick="addSkill('Pandas')">Pandas</button>
+  <button onclick="addSkill('NumPy')">NumPy</button>
+  <button onclick="addSkill('Matplotlib')">Matplotlib</button>
+  <button onclick="addSkill('EDA')">EDA</button>
+  <button onclick="addSkill('RFM Segmentation')">RFM Segmentation</button>
+  <button onclick="addSkill('Churn Analysis')">Churn Analysis</button>
+  <button onclick="addSkill('Data Cleaning')">Data Cleaning</button>
+  <button onclick="addSkill('Data Visualization')">Data Visualization</button>
+  <button onclick="addSkill('Business Intelligence')">Business Intelligence</button>
+  <button onclick="addSkill('Statistics')">Statistics</button>
+  <button onclick="addSkill('Dashboards')">Dashboards</button>
+  <button onclick="addSkill('Storytelling with Data')">Storytelling with Data</button>
+</div>
+
   <div id="selected-skills" class="skills-display"></div>
 </section>
 <!-- My Projects Section -->
@@ -2049,7 +2063,7 @@ object.tableauViz {
   function loadDashboardModal1(type) {
     const container = document.getElementById('tableauVizContainerModal1');
     container.innerHTML = `
-      <object class="tableauViz" style="width: 600px; height: 100%;">
+      <object class="tableauViz" style="width: 800px; height: 100%;">
         <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
         <param name="embed_code_version" value="3"/>
         <param name="path" value="${dashboardsModal1[type]}"/>
@@ -2089,7 +2103,7 @@ object.tableauViz {
     container.appendChild(script);
   }
  </script>
-  // Modal open logic
+
 <script>
   function openModal(id) {
     document.getElementById(id).style.display = 'block';
