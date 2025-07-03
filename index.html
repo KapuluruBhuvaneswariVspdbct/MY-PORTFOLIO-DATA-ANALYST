@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2140,166 +2141,81 @@ background-color:transparent;
   <img class="certificate-modal-content" id="certificateFullImg" alt="Certificate Fullscreen">
 </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhuvaneswari Kapuluru | AI Engineer</title>
+ <script>
+  // Modal 1 Dashboard Paths
+  const dashboardsModal1 = {
+    products: "views/products_17513385452750/products_dashboard",
+    customer: "views/customer_17513371633200/customerdashboard",
+    yearly: "views/year_17513373303450/year_wise_analysis"
+  };
 
-  <!-- Bootstrap & Fonts -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lato&display=swap" rel="stylesheet">
-  <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  // Modal 4 Dashboard Paths
+  const dashboardsModal4 = {
+    gender: "views/gender_dashboard_17514741069920/gender_dashboard",
+    job: "views/job_dashboard_17514741857490/job_dashboard",
+    marital: "views/marital_status_dashboard/marital_status_dashboard"
+  };
 
-  <style>
-    body {
-      background-color: #f9f9f9;
-      font-family: 'Lato', sans-serif;
-      margin: 0;
-      padding: 0;
+  // Modal 1 loader
+  function loadDashboardModal1(type) {
+    const container = document.getElementById('tableauVizContainerModal1');
+    container.innerHTML = `
+      <object class="tableauViz" style="width: 910px; height: 100%;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+        <param name="embed_code_version" value="3"/>
+        <param name="path" value="${dashboardsModal1[type]}"/>
+        <param name="toolbar" value="yes"/>
+        <param name="animate_transition" value="yes"/>
+        <param name="display_static_image" value="yes"/>
+        <param name="display_spinner" value="yes"/>
+        <param name="display_overlay" value="yes"/>
+        <param name="display_count" value="yes"/>
+        <param name="language" value="en-US"/>
+      </object>
+    `;
+    const script = document.createElement('script');
+    script.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    container.appendChild(script);
+  }
+
+  // Modal 4 loader (IMPORTANT: Fixed wrong container ID bug)
+  function loadDashboardModal4(type) {
+    const container = document.getElementById('tableauVizContainerModal4'); // Corrected!
+    container.innerHTML = `
+      <object class="tableauViz" style="width: 100%; height: 100%;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+        <param name="embed_code_version" value="3"/>
+        <param name="path" value="${dashboardsModal4[type]}"/>
+        <param name="toolbar" value="yes"/>
+        <param name="animate_transition" value="yes"/>
+        <param name="display_static_image" value="yes"/>
+        <param name="display_spinner" value="yes"/>
+        <param name="display_overlay" value="yes"/>
+        <param name="display_count" value="yes"/>
+        <param name="language" value="en-US"/>
+      </object>
+    `;
+    const script = document.createElement('script');
+    script.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    container.appendChild(script);
+  }
+ </script>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+    
+    if (id === 'modal1') {
+      loadDashboardModal1('products'); // Ensure default dashboard loads
     }
-
-    h3 {
-      text-align: center;
-      color: #000000;
-      margin-top: 30px;
-      font-weight: bold;
+    
+    if (id === 'modal4') {
+      loadDashboardModal4('gender'); // Ensure default dashboard loads
     }
+  }
 
-    .dashboard-wrapper {
-      display: flex;
-      width: 100%;
-      max-width: 1200px;
-      margin: 20px auto;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      height:600px;
-    }
 
-    .sidebar {
-      width: 280px;
-      background-color: #06923E;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sidebar button {
-      flex: 1;
-      padding: 20px;
-      border: none;
-      background-color: #28f1ff;
-      color: black;
-      font-weight: 500;
-      font-size: 25px;
-      cursor: pointer;
-      border-bottom: 1px solid #058435;
-      transition: background 0.3s;
-    }
-
-    .sidebar button:hover {
-      background-color: #12d5e7;
-    }
-
-    #vizContainerModal4 {
-      flex-grow: 1;
-      height: 600px;
-      padding: 10px;
-      background-color: #ffffff;
-    }
-
-    object.tableauViz {
-      width: 100%;
-      height: 100%;
-      border: none;
-      justify-content: center;
-    }
-    .dashboard-wrapper {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-  height: 100vh; /* Ensures full screen height */
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-#vizContainerModal4 {
-  flex-grow: 1;
-  height: 100%;
-  min-height: 500px;
-  padding: 0;
-  background-color: #ffffff;
-  display: flex;
-  align-items: stretch;width:1000px;
-  width:1000px;
-}
-
-object.tableauViz {
-  width: 1100px;
-  height: 100%;
-  border: none;
-}
-
-  </style>
-</head>
-<body style="background-color: rgb(255, 194, 103);">
-
-  <h3>📊 IBM HR ANALYTICS DASHBOARD</h3>
-
-  <div class="dashboard-wrapper">
-    <!-- Left Sidebar – Buttons -->
-    <div class="sidebar">
-      <button onclick="loadDashboardModal4('gender')">🚻 Gender Dashboard</button>
-      <button onclick="loadDashboardModal4('job')">💼 Job Role Dashboard</button>
-      <button onclick="loadDashboardModal4('marital')">❤️ Marital Status Dashboard</button>
-    </div>
-
-    <!-- Right Dashboard Embed -->
-    <div id="vizContainerModal4">
-      <div class='tableauPlaceholder' id='tableauVizContainerModal4'></div>
-    </div>
-  </div>
-
-  <script>
-    const dashboardsModal4 = {
-      gender: "views/gender_dashboard_17514741069920/gender_dashboard",
-      job: "views/job_dashboard_17514741857490/job_dashboard",
-      marital: "views/marital_status_dashboard/marital_status_dashboard"
-    };
-
-    function loadDashboardModal4(type) {
-      const container = document.getElementById('tableauVizContainerModal4');
-      container.innerHTML = `
-        <object class="tableauViz">
-          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
-          <param name="embed_code_version" value="3"/>
-          <param name="path" value="${dashboardsModal4[type]}"/>
-          <param name="toolbar" value="yes"/>
-          <param name="animate_transition" value="yes"/>
-          <param name="display_static_image" value="yes"/>
-          <param name="display_spinner" value="yes"/>
-          <param name="display_overlay" value="yes"/>
-          <param name="display_count" value="yes"/>
-          <param name="language" value="en-US"/>
-        </object>
-      `;
-      const script = document.createElement('script');
-      script.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-      container.appendChild(script);
-    }
-
-    // Load default dashboard
-    window.onload = () => loadDashboardModal4('gender');
-  </script>
-</body>
-</html>
-
+</script>
 
 
 <script>
