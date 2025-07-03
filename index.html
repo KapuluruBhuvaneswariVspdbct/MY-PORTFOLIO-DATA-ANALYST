@@ -1480,7 +1480,90 @@ object.tableauViz {
 background-color:transparent;
 }
 
+.contact-box-footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(78, 220, 255, 0.364);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 900px;
+}
 
+.contact-box-footer h2 {
+  font-size: 36px;
+  color: #0a0a0a;
+}
+
+.contact-box-footer span {
+  color: #4901ff;
+  font-family: 'Caveat', cursive;
+}
+
+.footer-contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.footer-card {
+  background-color: #73e6e2;
+  padding: 25px;
+  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.footer-card i {
+  font-size: 30px;
+  color: #090909;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom h3,
+.footer-bottom p {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.resume-btn {
+  background-color: #5a6ff0;
+  color: #141212;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background-color: #3f54d1;
+} 
 
   .linkedin-btn { background-color: #0077B5; }
   .github-btn { background-color: #2ea44f; }
@@ -2012,7 +2095,11 @@ background-color:transparent;
 </section>
 
   <!-- Contact Info Section -->
-  <footer>
+
+<footer class="footer">
+  <div class="footer-bg"></div>
+
+  <!-- Contact Info Section -->
   <div class="contact-box-footer">
     <h2>Contact <span>Me</span></h2>
     <div class="footer-contact-cards">
@@ -2027,7 +2114,16 @@ background-color:transparent;
       </div>
     </div>
   </div>
-</footer>
+
+  <!-- Footer Details Section -->
+  <div class="footer-bottom">
+    <div class="left">
+      <h3>Bhuvaneswari Kapuluru</h3>
+      <p>Aspiring Full Stack Developer</p>
+    </div>
+
+  </div>
+</footer> 
   <!-- Footer Details Section -->
 
 </body>
