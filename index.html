@@ -2074,9 +2074,18 @@ background-color:transparent;
       <button onclick="loadDashboardModal1('yearly')" style="flex: 1; font-size: 16px; padding: 20px; border: none; background-color: #06923E; color: white; cursor: pointer;">📈 Yearly Analysis</button>    </div>
 
     <!-- Right Column – Tableau Viz -->
-    <div id="vizContainerModal1" style="flex-grow: 1; height: 100%;">
-     <div class='tableauPlaceholder' id='tableauVizContainerModal1'></div>
-   </div>
+  <!-- Right Column – Power BI Embed -->
+<div style="flex-grow: 1; height: 100%;">
+  <iframe 
+    title="Customer Dashboard"
+    width="100%" 
+    height="100%" 
+    src="https://app.powerbi.com/reportEmbed?reportId=ce4eab0e-d29e-4761-8fda-3778c5624172&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5" 
+    frameborder="0" 
+    allowFullScreen="true">
+  </iframe>
+</div>
+
   </div>
 
 </div>
