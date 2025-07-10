@@ -1770,49 +1770,56 @@ background-color:transparent;
 
 
 <div class="project-card" style="position: relative; width: 500px;">
-  <img src="ibm_thumb.png" alt="IBM HR Analytics thumbnail" style="height: 290px; width: 100%; object-fit: cover; border-radius: 4px;">
+  <img src="amazon_thumb.png" alt="Amazon Sales Analytics thumbnail" style="height: 290px; width: 100%; object-fit: cover; border-radius: 4px;">
 
-  <h4>IBM HR Analytics</h4>
-  <p><strong>Domain:</strong> Human Resources</p>
-  <p><strong>Function:</strong> Workforce Analytics & Attrition</p>
+  <h4>Amazon Sales Analysis</h4>
+  <p><strong>Domain:</strong> E-commerce Sales</p>
+  <p><strong>Function:</strong> Business Intelligence & Churn Risk</p>
 
-  <p>This project focuses on employee attrition analysis using Tableau dashboards, uncovering trends in gender, job roles, and marital status. The insights help HR leaders at IBM make informed, data-driven decisions to improve retention and workforce planning.</p>
+  <p>This project delivers key insights into customer purchase behavior and business performance using SQL, Excel, Python (RFM + EDA), and Power BI. It highlights top-performing categories, payment patterns, customer churn, and product revenue trends for Amazon's 2025 sales.</p>
 
   <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
-    <button onclick="openModal('modal4')" style="padding: 8px 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer;" aria-label="Open IBM HR Analytics dashboard modal">See My Work</button>
-    
+    <button onclick="openModal('modal4')" style="padding: 8px 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer;" aria-label="Open Amazon Sales dashboard modal">See My Work</button>
+
     <div style="display: flex; gap: 6px;">
-      <img src="https://tse3.mm.bing.net/th/id/OIP.9xGmPVQBgecuvVp8kxjwpwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tableau Logo" title="Tableau" style="height: 80px; width: 90px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Power_BI_Logo.svg" alt="Power BI Logo" title="Power BI" style="height: 60px; width: auto;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" title="SQL" style="height: 60px; width: auto;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" title="Python" style="height: 60px; width: auto;">
     </div>
   </div>
 </div>
 
 
+
   </div>
-  <!-- Modal 4: IBM HR Analytics -->
 <div id="modal4" class="modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); z-index: 1000;">
   <div class="modal-content" style="background-color: #FAF1E6; margin: 5% auto; padding: 20px; border-radius: 8px; width: 100%; max-width: 1200px; position: relative;">
     <span class="close-modal" onclick="document.getElementById('modal4').style.display='none'" style="position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; color: #333; cursor: pointer;">&times;</span>
 
-    <h2 style="color:green;">AMAZON SALES ANALYTICS DASHBOARD USING POWER BI</h2>
-    <p><strong>Skills Used:</strong> Power BI, SQL, Python (Pandas), RFM Analysis, Churn Prediction</p>
-
-    <div class="project-links" style="margin-bottom: 16px;">
-      <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_amazon-powerbi-dashboard-activity" target="_blank" style="margin-right: 10px; text-decoration: none; color: white; background-color: #0077b5; padding: 8px 14px; border-radius: 4px;">🔗 LinkedIn</a>
-      <a href="https://github.com/KapuluruBhuvaneswariVspdbct/Amazon_Sales_Analysis" target="_blank" style="text-decoration: none; color: white; background-color: #333; padding: 8px 14px; border-radius: 4px;">💻 GitHub</a>
-    </div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-      <div style="flex: 1; min-width: 300px;">
+    <!-- Row 1 – Overview and Images -->
+    <div class="grid-row row-1">
+      <div class="info">
         <p><strong>Domain:</strong> E-commerce Sales</p>
         <p><strong>Function:</strong> Business Intelligence & Sales Optimization</p>
         <p>
           This project analyzes Amazon's 2025 sales dataset to deliver insights on <strong>customer behavior, revenue patterns, RFM segments, and churn risk</strong>. SQL and Python were used for cleaning, modeling, and extracting insights, while Power BI visualizes patterns interactively.
         </p>
       </div>
+      <div class="carousel">
+        <img src="img1.jpg" alt="Dashboard View 1" height="330px" width="200px">
+        <img src="img2.jpg" alt="Dashboard View 2" height="330px" width="200px">
+        <img src="img3.jpg" alt="Dashboard View 3" height="330px" width="200px">
+        <img src="img4.jpg" alt="Dashboard View 4" height="330px" width="200px">
+        <img src="img5.jpg" alt="Dashboard View 5" height="330px" width="200px">
+        <img src="img6.jpg" alt="Dashboard View 6" height="330px" width="200px">
+      </div>
+    </div>
 
-      <div style="flex: 1; min-width: 300px;">
-        <h3 style="color:green;">Project Details</h3>
+    <!-- Row 2 – Project Details + Video -->
+    <div class="grid-row row-2">
+      <div class="info">
+        <h3 style="color:green">Project Details</h3>
+        <p>This project focused on solving 7 real-world SQL business questions and followed by a dynamic dashboard in Power BI. It covered:</p>
         <ul>
           <li>Top-performing categories and products</li>
           <li>Revenue breakdown by customer location</li>
@@ -1822,15 +1829,35 @@ background-color:transparent;
           <li>High-risk segments and revenue loss insights</li>
         </ul>
       </div>
+      <div class="youtube-thumb">
+        <iframe width="100%" height="315" src="https://youtu.be/TTKsddHArc8" title="Amazon Sales BI Project Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
 
+    <!-- Row 3 – Power BI Dashboard -->
     <h3 style="color:green; margin-top: 24px;">LIVE DASHBOARD</h3>
     <div style="width: 100%; margin-top: 16px;">
-      <iframe title="AMAZON_SALES_DASHBOARD2"
-              width="100%" height="550"
-              src="https://app.powerbi.com/reportEmbed?reportId=0976e465-51e7-4f72-ba06-d545f91596d5&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5"
-              frameborder="0" allowFullScreen="true"></iframe>
+      <iframe title="AMAZON_SALES_DASHBOARD2" width="100%" height="550" src="https://app.powerbi.com/reportEmbed?reportId=0976e465-51e7-4f72-ba06-d545f91596d5&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5" frameborder="0" allowFullScreen="true"></iframe>
     </div>
+
+    <!-- Project Links -->
+    <div class="project-links" style="margin-top: 20px;">
+      <a href="https://www.linkedin.com/posts/bhuvaneswari-kapuluru-2892682bb_dataanalytics-powerbi-sql-activity-7349009655458676736-UVY7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEy_JYkBoNioJp_jgEL0gka0f68J6L4jAWM" target="_blank" style="margin-right: 10px; text-decoration: none; color: white; background-color: #0077b5; padding: 8px 14px; border-radius: 4px;">🔗 LinkedIn</a>
+      <a href="https://github.com/KapuluruBhuvaneswariVspdbct/AMAZON-SALES-ANALYSIS-" target="_blank" style="text-decoration: none; color: white; background-color: #333; padding: 8px 14px; border-radius: 4px;">💻 GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Row 3 – Power BI Embedded Dashboard -->
+<div class="grid-row row-3">
+  <h3 style="color:green; margin-bottom: 16px;">LIVE POWER BI DASHBOARD</h3>
+  <iframe title="AMAZON_SALES_DASHBOARD2"
+          width="100%" height="550"
+          src="https://app.powerbi.com/reportEmbed?reportId=0976e465-51e7-4f72-ba06-d545f91596d5&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5"
+          frameborder="0" allowFullScreen="true"></iframe>
+</div>
+
   </div>
 </div>
 
