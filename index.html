@@ -1612,11 +1612,85 @@ background-color:transparent;
 
   .linkedin-btn { background-color: #0077B5; }
   .github-btn { background-color: #2ea44f; }
+/* RESPONSIVE LAYOUT ONLY - No color or design changes */
+@media (max-width: 768px) {
+  /* HERO SECTION STACKING */
+  .hero-text,
+  .hero-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero-icons img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn-resume {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* SKILLS SECTION STACKING */
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-item {
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .skill-item img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* ABOUT SECTION SCALING */
+  .about-me {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .about-me h2 {
+    font-size: 20px;
+  }
+}
 
   </style>
 </head>
 <body>
-  <section class="hero">
+ ;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  "
+  onmouseover="this.style.backgroundColor='#047834'" 
+  onmouseout="this.style.back <section class="hero">
     <div class="hero-text">
       <h2>Hello, I am 👋</h2>
 
@@ -1640,17 +1714,7 @@ background-color:transparent;
   style="
     display: inline-block;
     padding: 10px 20px;
-    background-color:#91C8E4;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  "
-  onmouseover="this.style.backgroundColor='#047834'" 
-  onmouseout="this.style.backgroundColor='#06923E'"
+    background-color:#91C8E4groundColor='#06923E'"
 >
   📄 Download Resume
 </a>
