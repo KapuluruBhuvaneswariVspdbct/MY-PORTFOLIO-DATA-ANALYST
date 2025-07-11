@@ -1774,6 +1774,61 @@ background-color:transparent;
     height: auto;
   }
 }
+@media (max-width: 768px) {
+  /* HERO SECTION FIX */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: 2;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .btn-resume {
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* SKILLS SECTION FIX */
+  .skills-summary {
+    padding: 30px 10px;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .skill-item {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .skill-item img {
+    width: 50px;
+    height: auto;
+  }
+}
 
   </style>
 </head>
