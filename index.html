@@ -1723,7 +1723,51 @@ background-color:transparent;
   line-height: 1.4;
 }
 
-} 
+  .skills-summary {
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column; /* Icon above text */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px; /* Allows it to shrink on small screens */
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+
+  .skill-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .skill-item h5 {
+    margin: 8px 0 4px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .skill-item p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
   .linkedin-btn { background-color: #0077B5; }
   .github-btn { background-color: #2ea44f; }
