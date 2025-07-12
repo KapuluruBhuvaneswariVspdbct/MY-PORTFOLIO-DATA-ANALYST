@@ -1586,7 +1586,7 @@ background-color:transparent;
 
   .skills-container {
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     align-items: center;
     gap: 15px;
   }
@@ -1684,8 +1684,47 @@ background-color:transparent;
   }
 .resume-btn:hover {
   background-color: #3f54d1;
-} 
+  .skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
 
+.skill-item {
+  display: flex;
+  flex-direction: column;  /* <<< Fix: vertical stacking */
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 250px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-item h5 {
+  margin: 8px 0 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.skill-item p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+} 
+}
   .linkedin-btn { background-color: #0077B5; }
   .github-btn { background-color: #2ea44f; }
 /* RESPONSIVE LAYOUT ONLY - No color or design changes */
