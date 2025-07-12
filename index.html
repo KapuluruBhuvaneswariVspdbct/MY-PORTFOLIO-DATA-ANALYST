@@ -1839,6 +1839,35 @@ background-color:transparent;
     cursor: pointer;
   }
 }
+/* By default, hide the warning */
+.mobile-warning {
+  display: none;
+}
+
+/* Show only on mobile screens */
+@media (max-width: 768px) {
+  .mobile-warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff8e1;
+    border-bottom: 2px solid #f1c40f;
+  }
+
+  .warning-card {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #856404;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 90%;
+  }
+}
 
   .linkedin-btn { background-color: #0077B5; }
   .github-btn { background-color: #2ea44f; }
@@ -1847,6 +1876,12 @@ background-color:transparent;
   </style>
 </head>
 <body>
+  <div class="mobile-warning">
+  <div class="warning-card">
+    📢 For the best experience, please view this portfolio on a **desktop browser**.
+  </div>
+</div>
+
   <section class="hero">
     <div class="hero-text">
       <h2>Hello, I am 👋</h2>
