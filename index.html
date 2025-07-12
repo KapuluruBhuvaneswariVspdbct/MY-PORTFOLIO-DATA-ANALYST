@@ -1614,27 +1614,29 @@ background-color:transparent;
   }
 
   /* Project card responsiveness */
- .project-card img {
-    width: 300px;
-    height: auto;
-    max-height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  /* 2. Project Cards - stack better */
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-card {
-    width: 90%;
-    max-width: 350px;
-    margin-bottom: 20px;
+ .project-card {
+    width: 90% !important;   /* Shrink the card width on smaller screens */
+    height: auto !important; /* Let height adjust automatically */
     padding: 15px;
   }
 
+  .project-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .project-card .tool-logos {
+    flex-wrap: wrap;         /* Allow logo icons to wrap instead of overflow */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .project-card .tool-logos img {
+    height: 40px;
+    max-width: 60px;
+    object-fit: contain;
+  }
   .skills-summary {
     padding: 30px 10px;
     display: flex;
@@ -1824,7 +1826,7 @@ background-color:transparent;
   <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
     <button onclick="openModal('modal4')" style="padding: 8px 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer;" aria-label="Open Amazon Sales dashboard modal">See My Work</button>
 
-    <div style="display: flex; gap: 6px;">
+    <div  class="tool-logos" style="display: flex; gap: 6px;">
       <img src="https://www.jeveuxetredatascientist.fr/wp-content/uploads/2023/09/Power-BI-Logo-2020-scaled.jpg" alt="Power BI Logo" title="Power BI" style="height: 60px; width: auto;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL" title="SQL" style="height: 60px; width: auto;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" title="Python" style="height: 60px; width: auto;">
@@ -1847,7 +1849,7 @@ background-color:transparent;
     <button onclick="openModal('modal1')" style="padding: 8px 16px; background-color: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer;">See My Work</button>
     
     <!-- SQL & Tableau Logos (from CDN) -->
-    <div style="display: flex; gap: 6px;">
+    <div class="tool-logos" style="display: flex; gap: 6px;">
       <img src="https://ts2.mm.bing.net/th?id=OIP.5EWKydu1VlgP8yJO8IRhYQHaDb&pid=15.1" alt="SQL Logo" title="SQL" style="height: 80px; width: 90px;">
       <img src="https://www.jeveuxetredatascientist.fr/wp-content/uploads/2023/09/Power-BI-Logo-2020-scaled.jpg" alt="Power BI Logo" title="Tableau" style="height: 80px; width: 90px;">
     </div>
@@ -1868,7 +1870,7 @@ background-color:transparent;
   <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
     <button onclick="openModal('modal2')" style="padding: 10px 16px;">See My Work</button>
     
-    <div style="display: flex; gap: 7px;">
+    <div class="tool-logos" style="display: flex; gap: 7px;">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="50" height="50">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" width="50" height="50">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" width="50" height="50">
@@ -1890,7 +1892,7 @@ background-color:transparent;
   <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
     <button onclick="openModal('modal3')" style="padding: 10px 16px;">See My Work</button>
 
-    <div style="display: flex; gap: 7px;">
+    <div class="tool-logos" style="display: flex; gap: 7px;">
       <img src="https://th.bing.com/th/id/OIP.ibQPA-rdk8i4DrME_fOp4gHaE8?w=254&h=180&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3" alt="Excel Icon" width="60" height="60">
         <img src="https://logodownload.org/wp-content/uploads/2018/10/word-logo-0-2048x2048.png" alt="Word Icon" width="60" height="60">
 
