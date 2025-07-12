@@ -1544,6 +1544,100 @@ background-color:transparent;
   font-size: 14px;
   transition: 0.3s;
 }
+@media (max-width: 768px) {
+  /* Hero image properly below text and not overlapping */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .hero-image {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 0;
+    object-fit: contain;
+  }
+
+  /* Resume button */
+  .btn-resume {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  /* Skill summary section */
+  .skills-summary {
+    width: 100%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .skill-item {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  }
+
+  /* Fix overlapping of About section */
+  .about-me {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-me p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Project card responsiveness */
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 350px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .project-card h4 {
+    font-size: 20px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
+
+  .project-card button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
 
 .resume-btn:hover {
   background-color: #3f54d1;
