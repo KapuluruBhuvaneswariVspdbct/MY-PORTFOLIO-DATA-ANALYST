@@ -1562,11 +1562,12 @@ background-color:transparent;
   }
 
   .hero-image img {
-    width: 90%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 0;
-    object-fit: contain;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;           /* makes it a circle */
+    object-fit: cover;
+    border: 4px solid #5271ff;    /* optional: nice border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   /* Resume button */
@@ -1613,6 +1614,15 @@ background-color:transparent;
   }
 
   /* Project card responsiveness */
+ .project-card img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* 2. Project Cards - stack better */
   .projects-container {
     flex-direction: column;
     align-items: center;
@@ -1621,21 +1631,29 @@ background-color:transparent;
   .project-card {
     width: 90%;
     max-width: 350px;
-    padding: 15px;
     margin-bottom: 20px;
+    padding: 15px;
   }
 
-  .project-card h4 {
-    font-size: 20px;
+  /* 3. Fix the Key Skills stacking */
+  .skills-container {
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .project-card p {
-    font-size: 14px;
+  .skill-item {
+    width: 90%;
+    max-width: 300px;
   }
 
-  .project-card button {
-    font-size: 13px;
-    padding: 8px 16px;
+  /* 4. Extend background (pink container) vertically */
+  .skills-summary {
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
