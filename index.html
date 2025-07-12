@@ -1769,6 +1769,98 @@ background-color:transparent;
     line-height: 1.4;
   }
 }
+  @media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 20px 10px;
+    overflow-y: auto;
+    max-height: 95vh;
+  }
+
+  .modal-grid,
+  .grid-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0;
+  }
+
+  .carousel img {
+    flex-shrink: 0;
+    width: 180px;
+    height: auto;
+    scroll-snap-align: start;
+    border-radius: 8px;
+  }
+
+  .info {
+    width: 100% !important;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .youtube-thumb iframe,
+  #tableauContainer iframe {
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  #tableauContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .project-links a {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .experience-card,
+  .certificate-card {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .certificate-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .certificate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .close-modal {
+    font-size: 30px;
+    float: right;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+}
+
   .linkedin-btn { background-color: #0077B5; }
   .github-btn { background-color: #2ea44f; }
 /* RESPONSIVE LAYOUT ONLY - No color or design changes */
